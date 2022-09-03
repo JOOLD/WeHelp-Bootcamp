@@ -1,0 +1,59 @@
+.headline{
+    background-color:#344648;
+    padding: 15px;
+    font-size:30px;
+    font-weight:bold;
+    text-align:center;
+    color:white
+}
+.questionTitle{
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    font-weight:bold;
+    background-color:#FFBB98;
+    margin:10px 130px 0px 130px;
+    border-radius:7px 7px 0 0;
+}
+.introductionAns1{
+    line-height: 25px;
+    background-color:rgb(243, 228, 209);
+    margin:0px 130px 0px 130px;
+    border-radius:0 0 7px 7px;
+}
+.efforAns2{
+    line-height: 25px;
+    background-color:rgb(243, 228, 209);
+    margin:0px 130px 0px 130px;
+    border-radius:0 0 7px 7px;
+}
+.scheldleAns3{
+    line-height: 25px;
+    background-color:rgb(243, 228, 209);
+    margin:0px 130px 0px 130px;
+    border-radius:0 0 7px 7px;
+}
+.goalAns4{
+    line-height: 25px;
+    background-color:rgb(243, 228, 209);
+    margin:0px 130px 0px 130px;
+    border-radius:0 0 7px 7px;
+}
+.nightmareAns5{
+    line-height: 25px;
+    background-color:rgb(243, 228, 209);
+    margin:0px 130px 0px 130px;
+    border-radius:0 0 7px 7px;
+}
+.experienceAns6{
+    line-height: 25px;
+    background-color:rgb(243, 228, 209);
+    margin:0px 130px 0px 130px;
+    border-radius:0 0 7px 7px;
+}
+.otherAns7{
+    line-height: 25px;
+    background-color:rgb(243, 228, 209);
+    margin:0px 130px 0px 130px;
+    border-radius:0 0 7px 7px;
+}
