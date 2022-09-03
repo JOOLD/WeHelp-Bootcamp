@@ -1,2 +1,2 @@
-# WeHelp-Bootcamp
+# WeHelp-Bootcamp.github.io
 Application
