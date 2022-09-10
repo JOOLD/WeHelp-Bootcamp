@@ -1,0 +1,111 @@
+.frame-left{
+    display:flex;
+}
+.userInterface{
+    background-color:white;
+    flex:none;
+    width:550px;
+    height:950px;
+    position: relative;
+}
+.userPhoto{
+    background-color:#6096BA;
+    flex:none;
+    height:450px;
+    text-align: center;
+    position: relative;
+
+}
+.circleUser{
+    width: 250px;
+    height: 250px;
+    border-radius:50%;
+    position: absolute;
+    right: 150px;
+    bottom: 160px;
+}
+.photoWelcome{
+    font-size:30px;
+    width:550px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 110px;
+}
+.title-1{
+    display:flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+.year-month{
+    font-weight: bold;
+}
+.title-2{
+    display:flex;
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 525px;
+}
+.day{
+    width:75px;
+    font-size:20px;
+    font-weight:bold;
+    color: #1e7ac5;
+}
+.triangleLeft{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 13px 30px 13px 0;
+    border-color: transparent #1e7ac5 ;
+    background-color: transparent;
+    margin-right: 10px;
+}
+.year-month{
+    font-size:20px;
+    vertical-align:middle;
+}
+.triangleRight{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 13px 0 13px 30px;
+    border-color: transparent #1e7ac5;
+    background-color: transparent;
+    margin-left: 10px;
+}
+.list{
+    display:flex;
+    flex-wrap:wrap;/* 允許空間不夠時可以往下掉 */
+    width:525px;
+    margin-left:30px;
+    margin-top:30px;
+}
+.list>.date{    /* .list >  代表底下的直接子元素 */
+    width:75px;
+    height:70px;
+}
+.list>.fadeout{
+    opacity:0.3;
+}
+.frame-right{
+    background-color:#E7ECEF;
+    flex:auto;
+    height:auto;
+}
+.item{
+    width: 1200px;
+    height: 150px;
+    background-color: white;
+    padding: 15px 20px;
+    margin-left: 50px;
+    margin-top: 40px;
+}
+.feeling{
+    display:flex;
+    background-color: rgb(166, 165, 165);
+    width: 400px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}

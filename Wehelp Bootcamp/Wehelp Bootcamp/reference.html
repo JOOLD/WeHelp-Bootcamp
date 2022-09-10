@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <title>萬年曆</title>
+        <link rel="stylesheet" type="text/css" href="re.css" />
+    </head>
+    <body>
+        <div class="title-1">
+            <button onclick="preMonth()" class="triangleLeft"></button>
+            <span class="year-month" id="year-month"></span>
+            <button onclick="nextMonth()" class="triangleRight"></button>
+        </div>
+        <div class="list" id="list"></div>
+        <script>
+            // 資料
+            let state=null;
+            // 初始化萬年曆
+            function init(){
+                state={
+                    current:new Date()
+                };
+                render();
+            }
+            function preMonth(){
+                state.current.setMonth(state.current.getMonth()-1);
+                render();
+            }
+            function nextMonth(){
+                state.current.setMonth(state.current.getMonth()+1);
+                render();
+            }
+            // 根據資料畫面
+            function render(){
+                let head=document.querySelector("#year-month");
+                head.textContent=state.current.getFullYear()+" / "+(state.current.getMonth()+1);
+                let list=document.querySelector("#list");
+                list.innerHTML=""; // 先清空畫面
+                // 先取得這個月的第一天
+                let firstDate=new Date(state.current.getFullYear(), state.current.getMonth(), 1);
+                // 往前算到星期日
+                let date=new Date(firstDate.getFullYear(), firstDate.getMonth(), 1);
+                date.setDate(date.getDate()-date.getDay());
+                // 畫出上個月的後幾天
+                while(date<firstDate){
+                    renderDate(date, list);
+                    date.setDate(date.getDate()+1);
+                }
+                // 畫出這個月的日期
+                while(date.getMonth()===state.current.getMonth()){
+                    // 畫出一天的格子
+                    renderDate(date, list);
+                    // 日期+1
+                    date.setDate(date.getDate()+1);
+                }
+                // 畫出下個月的後幾天
+                while(date.getDay()>0){
+                    renderDate(date, list);
+                    date.setDate(date.getDate()+1);
+                }
+
+            }
+            function renderDate(date, list){
+                let cell=document.createElement("div");
+                cell.className="date"+(date.getMonth()===state.current.getMonth()?"":" fadeout");
+                cell.textContent=date.getDate();
+                list.appendChild(cell);
+            }
+            // 處理流程
+            init();
+        </script>
+    </body>
+</html> 
+
+
